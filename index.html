@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моей любимой... Открытое письмо</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts (with Cyrillic support) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light-peach">
+
+    <!-- Landing Page -->
+    <header id="landing-page" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-1 heading-font">Моей любимой...</h1>
+        <p class="lead body-font mb-4">Открытое письмо.</p>
+        <button id="read-letter-btn" class="btn btn-lg btn-custom">Читать письмо</button>
+    </header>
+
+    <!-- Main Letter Section -->
+    <main id="letter-section" class="d-none">
+        <!-- Envelope -->
+        <div id="envelope" class="envelope">
+            <div class="flap front"></div>
+            <div class="flap top"></div>
+            <div class="body"></div>
+            <div class="letter-preview">
+                <p class="heading-font fs-4">Моей любимой...</p>
+            </div>
+        </div>
+
+        <!-- Letter Pages Container -->
+        <div id="letter-container" class="container d-none">
+            <div id="book" class="book">
+                <!-- Page 1 -->
+                <div class="page active-page">
+                    <div class="page-content">
+                        <p class="typewriter"></p>
+                    </div>
+                </div>
+                <!-- Page 2 -->
+                <div class="page">
+                    <div class="page-content">
+                        <p class="typewriter"></p>
+                    </div>
+                </div>
+                <!-- Page 3 -->
+                <div class="page">
+                    <div class="page-content">
+                        <p class="typewriter"></p>
+                    </div>
+                </div>
+                <!-- Page 4 -->
+                <div class="page">
+                     <div class="page-content">
+                        <p class="typewriter"></p>
+                    </div>
+                </div>
+                <!-- Page 5 (Final) -->
+                <div class="page">
+                    <div class="page-content">
+                        <p class="typewriter"></p>
+                        <p class="text-end mt-5 heading-font fs-4">- Со всей моей любовью</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation and Controls -->
+            <div class="controls text-center mt-4">
+                <button id="prev-page-btn" class="btn btn-custom" disabled><i class="fas fa-arrow-left"></i> Назад</button>
+                <span id="page-indicator" class="mx-3 body-font">Страница 1 из 5</span>
+                <button id="next-page-btn" class="btn btn-custom">Далее <i class="fas fa-arrow-right"></i></button>
+            </div>
+             <div class="utility-buttons text-center mt-3">
+                <button id="sound-toggle-btn" class="btn btn-sm btn-icon"><i class="fas fa-volume-up"></i></button>
+                <button id="download-pdf-btn" class="btn btn-custom">Скачать как PDF</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Background Audio -->
+    <audio id="background-audio" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-thelightbetweenus.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
